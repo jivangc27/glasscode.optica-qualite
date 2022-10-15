@@ -22,5 +22,9 @@
     {
         "usuario" : "Root",
         "contraseña" : "root"
+    },
+    {
+        "usuario" : "Dani",
+        "contraseña" : "12345678"
     }
 ]
