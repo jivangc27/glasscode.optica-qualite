@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <title>Armazones</title>
+        
+        <!--Hoja de Estilos-->
+        <link href="../../css/styles.css" rel="stylesheet" />
+        <link  href="../../css/styleform.css" rel="stylesheet"/>
+        <!--Fuentes-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!--Icono de pestaña-->
+        <link  rel="icon" href="../../img/favicon-32x32.png">
+        
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="../../home/home.html"><img src="../../img/QUALITE MONO-HOR-PRL (2).png" alt=""  width="80%"></a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li><a class="navbar-brand ps-3" href="../moduloClientes/clientes.html">Clientes</a></li>
+                <li><a class="navbar-brand ps-3" href="../moduloEmpleados/empleados.html">Empleados</a></li>
+                <li><a class="navbar-brand ps-3" href="../moduloProductos/productos.html">Productos</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand ps-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Lentes <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Examen de la Vista</a></li>
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Materiales</a></li>
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Tratamientos</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand ps-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Tienda <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Presupuestos</a></li>
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Ventas</a></li>
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Pagos</a></li>
+                    </ul>
+                </li>
+                
+                <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion"></div>
+                <li class="nav-item dropdown">
+                    <a class="navbar-brand ps-3" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Configuracion</a></li>
+                        <li><a class="dropdown-item" onclick="alert('pagina en construccion. Seleccionar otro módulo');">Bitacora de Compra</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="../../index.html">Cerrar Sesion</a></li>
+                    </ul>
+                </li>                
+            </ul>            
+        </nav>
+        <!-- Confirmacion de eliminar -->
+        <div class="modal fade" id="modal-confirmarDelete" tabindex="-1" aria-labelledby="VentanaConfirmacion" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">¿Desea eliminar el armazón?</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>ESTA ES UNA ELIMINACIÓN LÓGICA, POR LO TANTO EL ESTATUS DEL ARMAZÓN SOLO CAMBIARÁ A ESTADO <strong>INACTIVO</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" id="confirmarDelete">Aceptar</button>
+                    </div>
+              </div>
+            </div>
+        </div>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading"></div>
+                            <a class="nav-link" href="../../home/home.html">
+                                <div class="sb-nav-link-icon"></div>
+                               Inicio
+                            </a>
+
+                            <div class="sb-sidenav-menu-heading">Gestiones</div>
+                            
+                            <a class="nav-link" href="../moduloArmazones/armazones.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-glasses"></i></div>
+                                Armazones
+                            </a>
+                            <a class="nav-link" href="../moduloSoluciones/soluciones.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-eye-dropper"></i></div>
+                                Soluciones
+                            </a>
+                            
+                            <a class="nav-link" href="../moduloAccesorios/accesorios.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-star"></i></div>
+                                Accesorios
+                            </a>
+                            <a class="nav-link" href="../moduloLentesContacto/lentecontacto.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-eye"></i></div>
+                                Lentes de Contacto
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+
+                <main>
+                    <!--Contenido-->
+                    <div class="container-fluid px-4">
+                        
+                        <h1 class="mt-4">Armazones</h1>
+
+                        <!--Migajas de Pan-->
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="../../home/home.html">Inicio</a></li>
+                            <li class="breadcrumb-item"><a href="../moduloProductos/productos.html">Productos</a></li>
+                            <li class="breadcrumb-item active">Armazones</li>
+                        </ol>
+
+                        <!--Area Contenido-->
+                        <div class="row">
+                            <div class="col-xl-5">
+                                <!--Contenido Izquierda-->
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-glasses"></i>
+                                        Datos
+                                        <div class="formulario">
+                                            
+                                            <form>
+                                                <!-- Cuerpo del formulario -->
+                                                <div class="cuerpo">
+                                                    <!-- Zona izquierda del formulario -->
+                                                    <div class="contenido izquierda">
+                                                        <!-- Id -->
+                                                        <div class="elemento-formulario">
+                                                            <input type="text" name="txtId" id="txtId" hidden>
+                                                        </div>
+                                                        <!-- Nombre -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtNombre">Nombre:</label>
+                                                            <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingresar nombre" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Subir fotografía-->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtImagen">Ruta de la imagen:</label>
+                                                            <input type="text" id="txtImagen" name="txtImagen" placeholder="Ingresar ruta de la imagen" required>
+                                                        </div> 
+                                                        <br/>
+                                                        <!-- Imagen muestra-->
+                                                        <div class="elemento-formulario">
+                                                            <label for="docFotografia">Fotografía:</label>
+                                                            <br/>
+                                                            <input type="image" id="docFotografia" name="docFotografia" alt="imagen" style="max-width: 230px;" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwcHBwcHBwgHBwcHBwoHBwcHBw8ICQcKFREWFhUREx8YHSggGBoxJxMTITEhJSkrLi4uFx8zODM4NygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALcBEwMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABkQAQEBAQEBAAAAAAAAAAAAAAARAVECEv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwD10AAAAAAAAFBFFBBQAUgIRYQEFhAZFARGkBFEAAAAAAAAAAAAAAAAAVFAFAFFBFikBFixYDMI1CAzEjcSAzEjcQGUaQERpAZFQAAAFBAAAAAAAAAAUFAUUBTFAixVBIRqEBIRqEBmJGoAxEjcQGUaQGUaZBEVAQVAVAAAAAAAAAAVFwFMMUFxUxcBcXDFwFUxcAWCgkGgGYjQDCa1qaDKa1rOgzqNazoIioCIqAAAAAAAKIAAAqKCqiguLiYuA1i4mLgNYuJig0rKg0JQDU1UBNTRNBNTV1nQTU1WdBNRdQERUAAAABUAAAAABcQBrFxlQaxcZUGsaxhrAaVlaDSs1aDRWaUFEqUFZ0qAJomgmpq6mgiACIuoAAAAAAAAAAAogKrKgqoA2MqDeaM1aDVWsVaDVKzSg1UqUoLUqVKCoVAEEAQQAFBAAAAAAAAAAAAAAVWVBVZUGisqDVKzQGqVmgNUrNAUqVAVBAVBAVABUAAAAAAAAVAAAAAAUEVYTAZVqZxZnAYG5nFnnmAwOk88w+fPMBzHX588w+fPMByo6fPnmE88wHNHWeeYk88wHNHSZxJnAYG5iAyKAgAAAAKAgAAAAAAAKgCqgDSsqCqyoNDK0FpUAUqAAgAggAIAgAAAAAqAAAAAAAAAAAAqAKqAKqFBRAGhkBRAFQAEABAAAAAAAAAAAAAAVAAAAAAAAAFAAAAAAAAEAAAAAAAVAAAAAAAB/9k="  disabled>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Modelo -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtModelo">Modelo:</label>
+                                                            <input type="text" id="txtModelo" name="txtModelo" placeholder="Modelo" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Marca -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtMarca">Marca:</label>
+                                                            <input type="text" id="txtMarca" name="txtMarca" placeholder="Marca" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Color -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtColor">Color:</label>
+                                                            <input type="text" id="txtColor" name="txtColor" placeholder="Color" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Descripcion -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtDescripcion">Descripción:</label>
+                                                            <input type="text" id="txtDescripcion" name="txtDescripcion" placeholder="Descripcion" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Dimensiones -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtDimensiones">Dimensiones:</label>
+                                                            <input type="text" id="txtDimensiones" name="txtDimensiones" placeholder="Dimensiones" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Precio Compra -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtPrecioCom">Precio Compra:</label>
+                                                            <input type="text" id="txtPrecioCom" name="txtPrecioCom" placeholder="Precio Compra" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Precio Venta -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtPrecioVen">Precio Venta:</label>
+                                                            <input type="text" id="txtPrecioVen" name="txtPrecioVen" placeholder="Precio Venta" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Existencias -->
+                                                        <div class="elemento-formulario">
+                                                            <label for="txtExistencias">Existencias:</label>
+                                                            <input type="number" id="txtExistencias" name="txtExistencias" placeholder="Existencia" required>
+                                                        </div>
+                                                        <br/>
+                                                        <!-- Estatus -->
+                                                        <div class="elemento-formulario">
+                                                            <select id="txtEstatus" name="txtEstatus" hidden>
+                                                                <option value="Activo">Activo</option>
+                                                                <option value="Inactivo">Inactivo</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>    
+                                                </div>
+                                                <!-- Fin del cuerpo del formulario -->
+                                                
+                                                <!-- zona de botones -->
+                                                <div class="contenido botones">
+                                                    <div class="elemento-formulario">
+                                                        <button class="mt-4 btn btn-success btn-lg" id="btnAdd" onclick="addArmazon();">Registrar</button>
+                                                        <button class="mt-4 btn btn-primary btn-lg" id="btnClear" onclick="cleanArmazon();">Limpiar</button>
+                                                        <button class="mt-4 btn btn-warning btn-lg" id="btnUpdate" onclick="updateArmazon();">Actualizar</button>
+                                                        <button type="button" class="mt-4 btn btn-danger btn-lg" id="btnDelete" data-bs-toggle="modal" data-bs-target="#modal-confirmarDelete">Eliminar</button>
+                                                    </div>
+                                                </div>
+                                                <!-- Fin de la zona de botones -->
+                                            </form> 
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!--Contenido Derecha-->
+                            <div class="col-xl-7" style="margin-bottom: 10px;">
+                                <div class="card mb-4 d-flex">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Inventario de armazones
+                                    </div>
+                                    <br/>
+                                    <!--Tabla de Conenido-->
+                                    <table id="datatablesSimple">
+                                        <thead>
+                                            <tr>
+                                                <th>Código de Barras</th>
+                                                <th>Imagen</th>
+                                                <th>Nombre</th>
+                                                <th>Modelo</th>
+                                                <th>Marca</th>
+                                                <th>Color</th>
+                                                <th>Descripcion</th>
+                                                <th>Dimensiones</th>
+                                                <th>Precio Compra</th>
+                                                <th>Precio Venta</th>
+                                                <th>Existencias</th>
+                                                <th>Estatus</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tblArmazones">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <!--Footer-->
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Optica Qualite 2022</div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+
+        <!--Script Bootstrap-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <!--Script Formato Tablas-->
+        <script src="../../js/sidebarScript.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="../../js/datatables-simple-demo.js"></script>
+        <script src="controller_Armazones.js"></script>
+    </body>
+</html>

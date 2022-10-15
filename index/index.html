@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container"  id="container">
+        <div class="img">
+            <img src="welcoming-photo.svg">
+        </div>
+        <div class="login-container">
+            <form action="login" method="post" id="form" name="form">
+                <h2>Bienvenido a Qualite</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h5>Usuario</h5>
+                        <input class="input" type="text" name="usuario" id="usuario" >
+                    </div>
+                </div>
+
+                <div class="input-div two">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div><h5>Contraseña</h5>
+                        <input class="input" type="password" name="contraseña" id="contraseña" >
+                    </div>
+                </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button type="submit" class="btn" value="Iniciar sesión" onclick="validarInicio();">Iniciar Sesión</button>
+
+                <p class="advertencias" id="advertencias"></p>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="indexScript.js"></script>
+    <script type="text/javascript" src="validar.js"></script>
+</body>
+</html>
